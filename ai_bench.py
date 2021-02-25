@@ -10,13 +10,15 @@ def main():
 
     if runComplete == 'false':
         if onlyInference == 'true':
-            result = benchmark.run_inference()
+            result = AIBenchmark(use_CPU=true, verbose_level=1).run_inference()
+            print(result)
         elif onlyTraining == 'true':
-            result = benchmark.run_training()
+            result = AIBenchmark(use_CPU=true, verbose_level=1).run_training()
+            print(result)
     else:
-        results = AIBenchmark().run()
+        results = AIBenchmark(use_CPU=true, verbose_level=1).run()
+        print(result)
     
-    print(result)
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     main()
